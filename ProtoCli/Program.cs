@@ -186,7 +186,7 @@ The current options are supported:
                 var queue = new Queue<DirectoryInfo>();
                 
                 var workingDirectory = Directory.CreateDirectory(workingDirectoryString);
-                Console.WriteLine(workingDirectory.FullName);
+           
                 var workingUri = new Uri(workingDirectory.FullName, UriKind.Absolute);
 
                 queue.Enqueue(workingDirectory);
@@ -231,16 +231,15 @@ The current options are supported:
                                 argsList[argsList.Count - 1] += $",file_extension=\"{argsDict["file_extension"]}\"";
                             }
                         }
-                        argsList.Add($"--proto_path=\"{workingDirectory.FullName}\"");
+                        argsList.Add($"--proto_path=\"{workingDirectory.FullName.Replace("\\","/")}\"");
 
 
 
                         var fileUri = new Uri(file.FullName);
-
+                        
                         var relativeString = workingUri.MakeRelativeUri(new Uri(directory.FullName)).OriginalString.Replace('\\', '/');
-                        var fwdIndex = relativeString.IndexOf('/');
-                        fwdIndex = fwdIndex < 0 ? 0 : fwdIndex;
-                        relativeString = relativeString.Substring(fwdIndex).Replace('\\', '/');
+                        
+                        relativeString = relativeString.Replace('\\', '/');
 
                         string outputPath;
 
@@ -252,11 +251,12 @@ The current options are supported:
                         {
                             outputPath = rootOutputDirectory.FullName.Replace('\\', '/')+"/"+ relativeString;
                         }
-
+                        
                         var dir = Directory.CreateDirectory(outputPath);
                         argsList.Add($"--{(argsDict.ContainsKey("lang")?argsDict["lang"]:"csharp")}_out=\"{outputPath}\"");
-                        argsList.Add($"\"{file.FullName.Replace('\\', '/')}\"");
-                        info.Arguments = string.Join(" ", argsList);                        
+                        argsList.Add("\""+file.FullName.Replace('\\', '/')+ "\"");                        
+                        info.Arguments = string.Join(" ", argsList);
+                        Console.WriteLine(info.Arguments);
                         var process = Process.Start(info);
                         process.WaitForExit();
                         if (process.ExitCode != 0)
