@@ -1,9 +1,0 @@
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\ProtoCli.deps.json
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\ProtoCli.runtimeconfig.json
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\ProtoCli.runtimeconfig.dev.json
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\ProtoCli.dll
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\ProtoCli.pdb
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\ProtoCli.csprojResolveAssemblyReference.cache
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\ProtoCli.AssemblyInfo.cs
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\ProtoCli.dll
-c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\ProtoCli.pdb
