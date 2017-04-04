@@ -5,10 +5,40 @@
     <TargetFramework>netcoreapp1.1</TargetFramework>
     <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
   </PropertyGroup>
-
-  <Target Name="AfterBuild">
-    <Copy SourceFiles="$(ProjectDir)\\protoc_*" DestinationFolder="$(TargetDir)" ContinueOnError="true" />
-  </Target>
-
-
+  
+ <ItemGroup>
+    <None Remove="protoc_linux_x64" />
+    <None Remove="protoc_linux_x86" />
+    <None Remove="protoc_macosx_x64" />
+    <None Remove="protoc_macosx_x86" />
+    <None Remove="protoc_windows_x64.exe" />
+    <None Remove="protoc_windows_x86.exe" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <Content Include="protoc_linux_x64">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="protoc_linux_x86">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="protoc_macosx_x64">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="protoc_macosx_x86">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="protoc_windows_x64.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+    <Content Include="protoc_windows_x86.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
 </Project>

@@ -10112,16 +10112,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NickCuthbert\\Documents\\visual studio 2017\\Projects\\ProtoCli\\ProtoCli\\ProtoCli.csproj",
-      "projectName": "ProtoCli",
-      "projectPath": "C:\\Users\\NickCuthbert\\Documents\\visual studio 2017\\Projects\\ProtoCli\\ProtoCli\\ProtoCli.csproj",
-      "outputPath": "C:\\Users\\NickCuthbert\\Documents\\visual studio 2017\\Projects\\ProtoCli\\ProtoCli\\obj\\",
+      "projectUniqueName": "E:\\Git\\ProtoCli\\protocli\\protocli.csproj",
+      "projectName": "protocli",
+      "projectPath": "E:\\Git\\ProtoCli\\protocli\\protocli.csproj",
+      "outputPath": "E:\\Git\\ProtoCli\\protocli\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/ProtoCli.dll": "C:\\Users\\NickCuthbert\\Documents\\visual studio 2017\\Projects\\ProtoCli\\ProtoCli\\bin\\placeholder\\netcoreapp1.1\\ProtoCli.dll"
+        "lib/netcoreapp1.1/protocli.dll": "E:\\Git\\ProtoCli\\protocli\\bin\\placeholder\\netcoreapp1.1\\protocli.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {

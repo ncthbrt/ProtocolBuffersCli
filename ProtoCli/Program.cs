@@ -24,6 +24,8 @@ The current options are supported:
     - build [options] [target_directory]:  
         --output=           The root folder where compiled files will be placed
 
+        --lang=             The output language. Options are [java,csharp,python, go]
+
         --namespace=        If this option is specified, the output file will 
                             be arranged in a hierarchy matching their namespace
                             from that specified in the source folder
@@ -33,7 +35,7 @@ The current options are supported:
                             ending in *.g.cs
 
         target_directory    Root directory to recursively look for proto files.
-                                This will usually be the proto project folder        
+                            This will usually be the proto project folder        
 ";
             Console.WriteLine(helpText);
         }
@@ -180,12 +182,12 @@ The current options are supported:
                 }
 
                 var suffix = RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? ".exe" : "";
-                var compilerPath = $"{Directory.GetParent(System.Reflection.Assembly.GetEntryAssembly().Location).FullName.Replace('\\', '/')}/protoc_{os}_{architecture}{suffix}";
-                Console.WriteLine(compilerPath);
+                var compilerPath = $"{Directory.GetParent(System.Reflection.Assembly.GetEntryAssembly().Location).FullName.Replace('\\', '/')}/protoc_{os}_{architecture}{suffix}";                
                 var queue = new Queue<DirectoryInfo>();
-
+                
                 var workingDirectory = Directory.CreateDirectory(workingDirectoryString);
-                var workingUri = new Uri(workingDirectoryString);
+                Console.WriteLine(workingDirectory.FullName);
+                var workingUri = new Uri(workingDirectory.FullName, UriKind.Absolute);
 
                 queue.Enqueue(workingDirectory);
                 var anyProtoFiles = false;
@@ -229,7 +231,8 @@ The current options are supported:
                                 argsList[argsList.Count - 1] += $",file_extension=\"{argsDict["file_extension"]}\"";
                             }
                         }
-                        argsList.Add($"--proto_path=\"{workingDirectoryString}\"");
+                        argsList.Add($"--proto_path=\"{workingDirectory.FullName}\"");
+
 
 
                         var fileUri = new Uri(file.FullName);
@@ -243,18 +246,17 @@ The current options are supported:
 
                         if (customOutput)
                         {
-                            outputPath = (rootOutputDirectory.FullName.Replace('\\', '/') + "/"+ ToPascalCase(relativeString));
+                            outputPath = rootOutputDirectory.FullName.Replace('\\', '/') +"/"+ ToPascalCase(relativeString);
                         }
                         else
                         {
-                            outputPath = (rootOutputDirectory.FullName.Replace('\\', '/') + "/" + relativeString);
+                            outputPath = rootOutputDirectory.FullName.Replace('\\', '/')+"/"+ relativeString;
                         }
 
                         var dir = Directory.CreateDirectory(outputPath);
                         argsList.Add($"--{(argsDict.ContainsKey("lang")?argsDict["lang"]:"csharp")}_out=\"{outputPath}\"");
                         argsList.Add($"\"{file.FullName.Replace('\\', '/')}\"");
                         info.Arguments = string.Join(" ", argsList);                        
-                        Console.WriteLine(info.Arguments);
                         var process = Process.Start(info);
                         process.WaitForExit();
                         if (process.ExitCode != 0)
