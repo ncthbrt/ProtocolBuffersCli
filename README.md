@@ -12,7 +12,8 @@ Note that it repects folder hierarchy, so if two proto files are stored in
  
  The current options are supported:
  
-```    - build [options] [target_directory]:  
+```
+  protocli build [options] [target_directory]:  
     
         --output=           The root folder where compiled files will be placed
         --lang=             The output language. Options are [java,csharp,python, go]
