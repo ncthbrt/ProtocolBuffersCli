@@ -10,8 +10,10 @@ Note that it repects folder hierarchy, so if two proto files are stored in
 /proto/A.proto' and '/proto/dir/B.proto' respectively, the output will be 
 /proto/A.cs and /proto/dir/B.cs when run from '/'.
  
-The current options are supported:
-    - build [options] [target_directory]:  
+ The current options are supported:
+ 
+```    - build [options] [target_directory]:  
+    
         --output=           The root folder where compiled files will be placed
         --lang=             The output language. Options are [java,csharp,python, go]
         --namespace=        If this option is specified, the output file will 
@@ -22,3 +24,4 @@ The current options are supported:
                             ending in *.g.cs
         target_directory    Root directory to recursively look for proto files.
                             This will usually be the proto project folder       
+```
