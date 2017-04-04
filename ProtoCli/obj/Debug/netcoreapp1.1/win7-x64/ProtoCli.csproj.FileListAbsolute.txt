@@ -1,0 +1,12 @@
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\hostpolicy.dll
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\hostfxr.dll
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\ProtoCli.exe
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\ProtoCli.deps.json
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\ProtoCli.runtimeconfig.json
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\ProtoCli.runtimeconfig.dev.json
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\ProtoCli.dll
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Debug\netcoreapp1.1\win7-x64\ProtoCli.pdb
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\win7-x64\ProtoCli.AssemblyInfo.cs
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\win7-x64\ProtoCli.dll
+C:\Users\NickCuthbert\Documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\win7-x64\ProtoCli.pdb
+c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\obj\Debug\netcoreapp1.1\win7-x64\ProtoCli.csprojResolveAssemblyReference.cache

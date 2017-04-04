@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ProtoCli</id>
+    <version>1.0.0</version>
+    <authors>ProtoCli</authors>
+    <owners>ProtoCli</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework=".NETCoreApp1.1">
+        <dependency id="Microsoft.NETCore.App" version="1.1.1" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Release\netcoreapp1.1\win7-x64\ProtoCli.runtimeconfig.json" target="lib\ProtoCli.runtimeconfig.json" />
+    <file src="c:\users\nickcuthbert\documents\visual studio 2017\Projects\ProtoCli\ProtoCli\bin\Release\netcoreapp1.1\win7-x64\ProtoCli.dll" target="lib\ProtoCli.dll" />
+  </files>
+</package>
